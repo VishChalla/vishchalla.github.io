@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vish Challa | Data Science for Supply Chains</title>
+  <meta name="description" content="Vish Challa: MSc Supply Chain Management student at Concordia with a BSc in Computational Data Science. Forecasting, inventory optimisation, data pipelines and machine learning projects.">
+  <meta property="og:title" content="Vish Challa | Data Science for Supply Chains">
+  <meta property="og:description" content="Forecasting, inventory optimisation, data pipelines and machine learning, with measured results.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vishchalla.github.io/">
+  <meta name="theme-color" content="#f6f2ea">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to projects</a>
+
+  <header class="nav" id="top">
+    <a class="nav__brand" href="#top" aria-label="Vish Challa, home">
+      <span class="nav__mark">VC</span>
+      <span class="nav__name">Vish Challa</span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="theme__sun" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path class="theme__moon" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- ───────────────────────── Hero ───────────────────────── -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow"><span class="dot"></span>Open to co-op and internship roles, Winter and Summer 2027</p>
+        <h1>Data science for <em>supply chains</em>.</h1>
+        <p class="lede">I'm Vish Challa, an MSc Supply Chain Management student at Concordia's John Molson School of Business with a BSc in Computational Data Science from Michigan State. I build forecasts, optimisation models and data pipelines, and I measure whether they actually work.</p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#work">See the work</a>
+          <a class="btn" href="https://github.com/VishChalla" target="_blank" rel="noopener">GitHub
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <a class="btn" href="https://www.linkedin.com/in/vish-challa-b3073b273/" target="_blank" rel="noopener">LinkedIn
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+        <p class="hero__meta">Montreal, QC &nbsp;·&nbsp; Canadian citizen &nbsp;·&nbsp; English, learning French</p>
+      </div>
+
+      <figure class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 520 440" role="presentation">
+          <defs>
+            <linearGradient id="band" x1="0" x2="1">
+              <stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>
+              <stop offset="1" stop-color="var(--accent)" stop-opacity=".22"/>
+            </linearGradient>
+          </defs>
+          <!-- grid -->
+          <g class="art__grid">
+            <path d="M40 90H480M40 170H480M40 250H480M40 330H480"/>
+          </g>
+          <!-- inventory sawtooth -->
+          <path class="art__saw" d="M40 300 L95 352 L95 262 L160 338 L160 250 L230 330 L230 232 L300 322 L300 214 L372 310 L372 196 L440 286 L440 178 L480 228"/>
+          <!-- forecast interval and line -->
+          <path class="art__band" d="M300 150 C340 132 380 118 420 96 S470 70 480 62 L480 138 C460 142 440 150 420 158 S340 184 300 190 Z" fill="url(#band)"/>
+          <path class="art__history" d="M40 214 C70 196 92 226 120 208 S168 168 196 182 S244 204 268 180 S292 164 300 170"/>
+          <path class="art__forecast" d="M300 170 C340 156 380 140 420 126 S466 104 480 98"/>
+          <circle class="art__now" cx="300" cy="170" r="5"/>
+          <!-- reorder point -->
+          <path class="art__rop" d="M40 268 C140 262 240 240 300 228 S420 190 480 176"/>
+          <!-- labels -->
+          <g class="art__labels">
+            <text x="40" y="74">DEMAND</text>
+            <text x="322" y="56">FORECAST · 80% INTERVAL</text>
+            <text x="40" y="382">STOCK ON HAND</text>
+            <text x="356" y="382">REORDER POINT</text>
+            <line x1="328" y1="378" x2="350" y2="378" class="art__key"/>
+          </g>
+        </svg>
+      </figure>
+    </section>
+
+    <!-- ───────────────────────── Numbers ───────────────────────── -->
+    <section class="numbers" aria-label="Selected results">
+      <div class="number">
+        <p class="number__value"><span data-count="42">42</span>%</p>
+        <p class="number__label">less inventory for the same fill rate, in a simulated 180-item network</p>
+      </div>
+      <div class="number">
+        <p class="number__value"><span data-count="118523" data-format="comma">118,523</span></p>
+        <p class="number__label">injected data defects cleaned, with KPIs matching ground truth exactly</p>
+      </div>
+      <div class="number">
+        <p class="number__value"><span data-count="230">230</span>k+</p>
+        <p class="number__label">railcar sensor readings analysed in my MxV Rail capstone</p>
+      </div>
+      <div class="number">
+        <p class="number__value"><span data-count="96.7" data-decimals="1">96.7</span>%</p>
+        <p class="number__label">test accuracy classifying 27,000 satellite images with ResNet-18</p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Work ───────────────────────── -->
+    <section class="section" id="work">
+      <header class="section__head">
+        <p class="kicker">01 &nbsp; Selected work</p>
+        <h2>Projects that end in a decision, not just a score.</h2>
+      </header>
+
+      <article class="case reveal">
+        <div class="case__body">
+          <p class="case__index">Supply chain analytics</p>
+          <h3>Supply Chain Control Tower</h3>
+          <p class="case__summary">Demand forecasting carried all the way to an inventory policy, then tested in simulation on demand the models never saw. Four forecast models compete in a rolling backtest; safety stock is sized from the forecast's measured error and each supplier's lead-time reliability.</p>
+          <dl class="case__facts">
+            <div><dt>Same service, less stock</dt><dd>$422k vs $724k of inventory at about 99% fill</dd></div>
+            <div><dt>Total cost</dt><dd>50% lower than a weeks-of-cover rule</dd></div>
+            <div><dt>Forecast error</dt><dd>24% below the seasonal benchmark</dd></div>
+          </dl>
+          <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Forecasting</li><li>Inventory optimisation</li><li>Monte Carlo</li><li>Streamlit</li></ul>
+          <a class="link" href="https://github.com/VishChalla/supply-chain-control-tower" target="_blank" rel="noopener">View code and write-up <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="case__figure"><img src="assets/img/control-tower-frontier.png" alt="Chart: fill rate against average inventory value. The forecast-driven policy reaches higher service at every inventory level than the weeks-of-cover rule." loading="lazy" width="1200" height="704"></figure>
+      </article>
+
+      <article class="case case--flip reveal">
+        <div class="case__body">
+          <p class="case__index">Data engineering</p>
+          <h3>Logistics Data Pipeline</h3>
+          <p class="case__summary">An ELT pipeline that turns two years of deliberately messy shipment files into tested delivery KPIs. The generator records the truth before damaging the data, so the test suite can prove the warehouse recovers on-time and OTIF rates exactly, and nothing is silently dropped.</p>
+          <dl class="case__facts">
+            <div><dt>Scale</dt><dd>60k orders, 296k tracking events, 12 dbt models</dd></div>
+            <div><dt>Trust</dt><dd>34 data tests plus truth reconciliation</dd></div>
+            <div><dt>Insight</dt><dd>Season-adjusted flag catches a carrier slipping from 81% to 64% on time</dd></div>
+          </dl>
+          <ul class="tags"><li>SQL</li><li>dbt</li><li>DuckDB</li><li>Python</li><li>Data quality</li><li>GitHub Actions</li></ul>
+          <a class="link" href="https://github.com/VishChalla/logistics-data-pipeline" target="_blank" rel="noopener">View code and write-up <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="case__figure"><img src="assets/img/pipeline-carrier-trend.png" alt="Chart: rolling on-time delivery by carrier over two years. Five carriers stay between 85 and 100 percent while one falls to about 60 percent." loading="lazy" width="1200" height="672"></figure>
+      </article>
+
+      <article class="case reveal">
+        <div class="case__body">
+          <p class="case__index">Predictive maintenance</p>
+          <h3>Railcar Force Anomaly Detection</h3>
+          <p class="case__summary">My capstone with MxV Rail analysed 230,000+ wheel-force readings from six track sites to flag high-stress equipment for maintenance review. That work is under NDA, so this is an independent recreation of the approach on synthetic data I generate: ratio and trend metrics that cancel out load, speed and site so a growing wheel defect stands out.</p>
+          <dl class="case__facts">
+            <div><dt>Defects caught</dt><dd>84% vs 48% for a fixed force limit, at equal false alarms</dd></div>
+            <div><dt>Earlier warning</dt><dd>27 days sooner (median) when both fire</dd></div>
+            <div><dt>Data</dt><dd>Fully synthetic, 229k readings; no MxV data or code</dd></div>
+          </dl>
+          <ul class="tags"><li>Python</li><li>pandas</li><li>Anomaly detection</li><li>Robust statistics</li><li>Simulation</li></ul>
+          <a class="link" href="https://github.com/VishChalla/railcar-force-anomaly-detection" target="_blank" rel="noopener">View code and write-up <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="case__figure"><img src="assets/img/railcar-one-wheel.png" alt="Two charts for one defective wheel. Raw force is scattered by whether the car is loaded; the normalised ratio leaves 1.0 soon after the defect starts and is flagged well before a fixed force limit." loading="lazy" width="1200" height="928"></figure>
+      </article>
+
+      <div class="grid">
+        <article class="card reveal">
+          <p class="card__index">Deep learning</p>
+          <h3>Satellite Image Classification</h3>
+          <p>Land-cover classification of 27,000 EuroSAT tiles across 10 classes, comparing a CNN trained from scratch, a fine-tuned ResNet-18, and a graph convolutional network over a k-nearest-neighbour image graph.</p>
+          <p class="card__result">ResNet-18: 96.7% test accuracy in the original 10-epoch run</p>
+          <ul class="tags"><li>PyTorch</li><li>CNN</li><li>GCN</li><li>Transfer learning</li></ul>
+          <a class="link" href="https://github.com/VishChalla/SatelliteImageClassification" target="_blank" rel="noopener">View code <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal">
+          <p class="card__index">Machine learning</p>
+          <h3>Stock Trend Forecasting</h3>
+          <p>Gradient boosting, bagging and random forest on ten years of prices, evaluated the sceptical way. A 0.98 R² on price turns out to equal "tomorrow is the same as today", and no model beats simple baselines on returns.</p>
+          <p class="card__result">Walk-forward validation, 16,450 out-of-sample predictions</p>
+          <ul class="tags"><li>scikit-learn</li><li>Time series</li><li>Backtesting</li></ul>
+          <a class="link" href="https://github.com/VishChalla/stock-trend-forecasting" target="_blank" rel="noopener">View code <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal">
+          <p class="card__index">Computer vision</p>
+          <h3>Handwritten Digit Recognition</h3>
+          <p>A CNN trained on MNIST with augmentation, served through a Streamlit app. The app re-centres and inverts uploaded photos so real handwriting on paper matches what the model was trained on.</p>
+          <p class="card__result">98.9% test accuracy; 299 of 300 paper-style digits read correctly</p>
+          <ul class="tags"><li>TensorFlow</li><li>Keras</li><li>Streamlit</li></ul>
+          <a class="link" href="https://github.com/VishChalla/HandwrittenCharacterNumberIdentification" target="_blank" rel="noopener">View code <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal">
+          <p class="card__index">Software fundamentals</p>
+          <h3>Euchre Card Game</h3>
+          <p>A C++17 simulation of Euchre between four computer players: dealing, trump selection, hand scoring and trick play. Revisited in 2026 to track down a crash, add seeded shuffles and test 1,000 full games.</p>
+          <p class="card__result">C++17, CMake, unit tests in CI</p>
+          <ul class="tags"><li>C++</li><li>CMake</li><li>Testing</li></ul>
+          <a class="link" href="https://github.com/VishChalla/EuchreCardGame" target="_blank" rel="noopener">View code <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── About ───────────────────────── -->
+    <section class="section section--tint" id="about">
+      <header class="section__head">
+        <p class="kicker">02 &nbsp; About</p>
+        <h2>A data scientist learning how supply chains really run.</h2>
+      </header>
+      <div class="about">
+        <div class="about__text">
+          <p>I studied computational data science at Michigan State, with a minor in economics, and finished with a predictive-maintenance capstone with MxV Rail: turning 230,000+ raw sensor readings into metrics that maintenance teams could act on.</p>
+          <p>I'm now doing a master's in supply chain management at Concordia's John Molson School of Business, combining the modelling and engineering side of data science with how operations, inventory and logistics decisions are actually made.</p>
+          <p>What I aim for in every project here: a clear baseline, an honest test, and a result stated in the units the business uses, whether that is dollars of inventory, late deliveries or days of warning.</p>
+        </div>
+        <div class="skills">
+          <div class="skill"><h4>Languages</h4><p>Python, SQL, R, C++, JavaScript</p></div>
+          <div class="skill"><h4>Machine learning</h4><p>scikit-learn, PyTorch, TensorFlow; forecasting, anomaly detection, deep learning (CNN, GCN)</p></div>
+          <div class="skill"><h4>Data and analytics</h4><p>pandas, NumPy, dbt, DuckDB, Excel, Power BI, Tableau, Matplotlib</p></div>
+          <div class="skill"><h4>Platforms and tools</h4><p>Databricks, AWS, Azure, Git, GitHub Actions, Streamlit, Flask, FastAPI, Linux</p></div>
+          <div class="skill"><h4>Supply chain</h4><p>Demand forecasting, safety stock and reorder points, ABC-XYZ segmentation, OTIF and carrier scorecards</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Experience ───────────────────────── -->
+    <section class="section" id="experience">
+      <header class="section__head">
+        <p class="kicker">03 &nbsp; Experience and education</p>
+        <h2>Where I've been.</h2>
+      </header>
+      <ol class="timeline">
+        <li class="reveal">
+          <p class="timeline__when">Sep 2026 to May 2028 (expected)</p>
+          <div>
+            <h3>MSc, Supply Chain Management (Co-op)</h3>
+            <p class="timeline__where">Concordia University, John Molson School of Business · Montreal, QC</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="timeline__when">Aug 2025 to Dec 2025</p>
+          <div>
+            <h3>Capstone: Railcar Force Anomaly Detection and Predictive Maintenance</h3>
+            <p class="timeline__where">MxV Rail · Michigan State University</p>
+            <ul>
+              <li>Analysed 230,000+ railcar sensor readings across 6 track locations in Python to detect abnormal vertical and lateral forces affecting wheel-rail safety.</li>
+              <li>Applied ratio-trend and variability metrics to flag high-stress axle segments for maintenance review.</li>
+              <li>Built visualisations comparing loading by car type and travel direction, and presented findings to technical and non-technical stakeholders.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="timeline__when">May 2023 to Aug 2025</p>
+          <div>
+            <h3>Teaching Assistant and Residential Mentor</h3>
+            <p class="timeline__where">Engineering and Science Success Academy, Michigan State University · East Lansing, MI</p>
+            <ul>
+              <li>Led weekly coding workshops for 50+ students, turning core programming concepts into hands-on projects.</li>
+              <li>Mentored first-year students one-on-one in Python and C++, raising average test scores by 35% and helping 20% advance to upper-level courses.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="timeline__when">Aug 2022 to May 2026</p>
+          <div>
+            <h3>BSc, Computational Data Science, Minor in Economics</h3>
+            <p class="timeline__where">Michigan State University · East Lansing, MI</p>
+            <p>Coursework: Machine Learning, Artificial Intelligence, Data Structures, Probability and Statistics.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ───────────────────────── Contact ───────────────────────── -->
+    <section class="contact" id="contact">
+      <p class="kicker">04 &nbsp; Contact</p>
+      <h2>Hiring for a co-op or internship in <em>data, analytics or supply chain</em>?</h2>
+      <p class="contact__lede">I'm available for four-month terms in Winter 2027 (January to April) and Summer 2027 (May to August), in Montreal or Toronto.</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid btn--large" href="mailto:challa.vish7@gmail.com">challa.vish7@gmail.com</a>
+        <a class="btn btn--large" href="https://www.linkedin.com/in/vish-challa-b3073b273/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn--large" href="https://github.com/VishChalla" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Vish Challa</p>
+    <p>Every number on this page comes from code in the linked repositories.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
